@@ -39,7 +39,6 @@ module "network" {
     ManagedOrganizationalUnit = "SharedServiceProdOU"
 
      # Syntax for nested OU
-
     ManagedOrganizationalUnit = "SharedServiceProdOU (ou-izmt-3bs55zyy)"
 
     SSOUserEmail              = "nusaybah0412+network@gmail.com"
