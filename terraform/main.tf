@@ -48,6 +48,7 @@ module "network" {
 
   account_tags = {
     "Learn Tutorial" = "AFT"
+    "Name" = "Nubi"
   }
 
   change_management_parameters = {
