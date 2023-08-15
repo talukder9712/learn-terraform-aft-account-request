@@ -34,7 +34,14 @@ module "network" {
   control_tower_parameters = {
     AccountEmail              = "nusaybah0412+network@gmail.com"
     AccountName               = "network-aft"
+
+    # Syntax for top-level OU
     ManagedOrganizationalUnit = "SharedServiceProdOU"
+
+     # Syntax for nested OU
+
+    ManagedOrganizationalUnit = "SharedServiceProdOU (ou-izmt-3bs55zyy)"
+
     SSOUserEmail              = "nusaybah0412+network@gmail.com"
     SSOUserFirstName          = "Network"
     SSOUserLastName           = "AFT"
