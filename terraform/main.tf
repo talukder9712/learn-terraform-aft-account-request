@@ -25,3 +25,33 @@ module "sandbox" {
 
   account_customizations_name = "sandbox"
 }
+
+
+
+module "network" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "nusaybah0412+network@gmail.com"
+    AccountName               = "network-aft"
+    ManagedOrganizationalUnit = "SharedServiceProdOU"
+    SSOUserEmail              = "nusaybah0412+network@gmail.com"
+    SSOUserFirstName          = "Network"
+    SSOUserLastName           = "AFT"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+  }
+
+  custom_fields = {
+    group = "prod"
+  }
+
+  account_customizations_name = "network"
+}
