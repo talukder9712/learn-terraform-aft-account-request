@@ -94,27 +94,27 @@ module "sandbox2" {
 }
 
 
-module "network1" {
+module "network13" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "nusaybah0412+network12@gmail.com"
-    AccountName               = "network-aft12"
+    AccountEmail              = "nusaybah0412+network13@gmail.com"
+    AccountName               = "network-aft13"
 
     # Syntax for top-level OU
-    ManagedOrganizationalUnit = "SharedServicesOU"  
+    # ManagedOrganizationalUnit = "SharedServicesOU"  
 
      # Syntax for nested OU
-    # ManagedOrganizationalUnit = "SharedServiceProdOU (ou-izmt-3bs55zyy)"
+    ManagedOrganizationalUnit = "SharedServiceProdOU (ou-izmt-3bs55zyy)"
 
-    SSOUserEmail              = "nusaybah0412+network12@gmail.com"
-    SSOUserFirstName          = "Network12"
+    SSOUserEmail              = "nusaybah0412+network13@gmail.com"
+    SSOUserFirstName          = "Network13"
     SSOUserLastName           = "AFT1"
   }
 
   account_tags = {
-    "Learn Tutorial" = "AFT1"
-    "Name" = "Nubi1"
+    "Learn Tutorial" = "AFT13"
+    "Name" = "Nubi13"
   }
 
   change_management_parameters = {
@@ -126,5 +126,5 @@ module "network1" {
     group = "prod"
   }
 
-  account_customizations_name = "network12"
+  account_customizations_name = "network123"
 }
